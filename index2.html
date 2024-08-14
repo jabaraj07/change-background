@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>THEME CHANGE PROJECT</title>
+</head>
+<style>
+    *{
+        margin: 0;
+        padding: 0;
+    }
+    .container{
+        display: flex;
+        justify-content: center ;
+        align-items: center;
+        height: 100vh;
+        background-color: rgb(22, 21, 23);
+    }
+    .container1{
+        display: flex;
+        justify-content: center ;
+        align-items: center;
+        height: 100vh;
+    }
+    .light-mode{
+        line-height: 150%;
+        background-color: red;
+        opacity: 0.8;
+        font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+        cursor: pointer;
+        transform: rotate(360deg);
+        transition: 0.8s;
+    }
+    .input{
+        background-color: greenyellow;
+        cursor: pointer;
+        transform: rotate(-360deg);
+        transition: 0.8s;
+    }
+    #container{
+        display: flex;
+        justify-content: center ;
+        align-items: center;
+        height: 100vh;
+    }
+    #input{
+        border-radius: 20px;
+        width: 150px;
+        padding: 20px 0px;
+        border-style: none;
+        font-size: 20px;
+    }
+</style>
+<body >
+
+    <div id="container">
+
+       <button id="input" ></button>
+
+    </div>
+
+    <script>
+        let container=document.getElementById("container")
+        let input = document.getElementById("input")
+
+        input.innerText="change Theme"
+
+        input.addEventListener("click",()=>{
+
+            if(container.className == "container"){
+             container.className="container1"
+            input.innerText="change to dark mode"
+            input.className="input"
+        }
+
+        else{
+             input.innerText="change to light mode"
+             input.className="light-mode"
+            container.className="container"
+        }
+        })
+
+    </script>
+</body>
+</html>
+
+
+
+
+
